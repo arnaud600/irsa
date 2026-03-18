@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Tableau de bord RH — Mars 2026</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0 }
+  body { font-family:Calibri,Arial,sans-serif; font-size:13px; color:#222; background:#f4f6f9 }
+  .page { max-width:1400px; margin:30px auto; background:white; padding:40px;
+            box-shadow:0 2px 12px rgba(0,0,0,.1) }
+  .header { background:#1F4E79; color:white; padding:24px 32px; border-radius:6px; margin-bottom:24px }
+  .header h1 { font-size:22px; margin-bottom:4px }
+  .header p { font-size:12px; opacity:.8 }
+  .kpi-bar { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:28px }
+  .kpi { background:#EBF3FB; border-left:4px solid #2E75B6; padding:14px; border-radius:4px }
+  .kpi.rouge { border-left-color:#C00000 }
+  .kpi.orange { border-left-color:#ED7D31 }
+  .kpi.vert { border-left-color:#375623 }
+  .kpi-val { font-size:26px; font-weight:bold; color:#1F4E79 }
+  .kpi-val.rouge { color:#C00000 }
+  .kpi-val.orange { color:#ED7D31 }
+  .kpi-lbl { font-size:10px; color:#595959; margin-top:3px }
+  .section { margin-bottom:28px }
+  .section-title { background:#1F4E79; color:white; padding:9px 14px; font-size:14px;
+                    font-weight:bold; border-radius:4px; margin-bottom:12px }
+  .agr-card { border:1px solid #D6E4F0; border-radius:6px; margin-bottom:16px }
+  .agr-title { background:#2E75B6; color:white; padding:8px 14px; font-size:13px;
+                font-weight:bold; cursor:pointer }
+  .agr-title:hover { background:#1F4E79 }
+  h4 { font-size:12px; color:#1F4E79 }
+  table { width:100%; border-collapse:collapse; font-size:12px; margin-bottom:4px }
+  thead tr { background:#2E75B6; color:white }
+  th { padding:5px 9px; text-align:left; font-weight:bold }
+  td { padding:4px 9px; border-bottom:1px solid #eee }
+  tr:nth-child(even) td { background:#F7FAFD }
+  tr.total-row td { background:#D6E4F0!important; font-weight:bold }
+  .num { text-align:right }
+  .toggle-bar { display:flex; gap:0; margin-bottom:20px; border-radius:6px;
+                  overflow:hidden; border:2px solid #1F4E79; width:fit-content }
+  .toggle-btn { padding:8px 22px; cursor:pointer; font-size:12px; font-weight:bold;
+                  background:white; color:#1F4E79; border:none }
+  .toggle-btn.active { background:#1F4E79; color:white }
+  .tab { display:none }
+  .tab.active { display:block }
+  @media print {
+    .toggle-bar,.agr-title { pointer-events:none }
+    .tab { display:block!important }
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <h1>Tableau de bord RH — Mars 2026</h1>
+  <p>Comparaison avec Fevrier 2026 | Agréments COCOF | Genere le 18/03/2026 a 19:34</p>
+</div>
+
+<!-- KPIs -->
+<div class="kpi"><div class="kpi-val">255</div><div class="kpi-lbl">Agents actifs (COCOF)</div></div>
+  <div class="kpi"><div class="kpi-val">195.69</div><div class="kpi-lbl">ETP total ce mois</div></div>
+  <div class="kpi rouge"><div class="kpi-val"style='color:#C00000'>5</div><div class="kpi-lbl">Alertes critiques</div></div>
+  <div class="kpi vert"><div class="kpi-val">0</div><div class="kpi-lbl">Alertes moderees</div></div>
+  <div class="kpi rouge"><div class="kpi-val"style='color:#C00000'>5</div><div class="kpi-lbl">CDD expires dans 30j</div></div>
+</div>
+
+<!-- TOGGLE -->
+<div class="toggle-bar">
+  <button class="toggle-btn active" onclick="showTab('vue_globale',this)">Vue globale</button>
+  <button class="toggle-btn" onclick="showTab('alertes',this)">Alertes</button>
+  <button class="toggle-btn" onclick="showTab('cdd',this)">CDD a echeance</button>
+  <button class="toggle-btn" onclick="showTab('couts',this)">Couts salariaux</button>
+  <button class="toggle-btn" onclick="showTab('detail',this)">Detail par agrement</button>
+</div>
+
+<!-- VUE GLOBALE -->
+<div id="tab-vue_globale" class="tab active">
+  <div class="section-title">ETP par agrement — Mars 2026 vs Fevrier 2026</div>
+  <table>
+    <thead><tr style="background:#2E75B6;color:white">
+      <th>Agrement</th>
+      <th>PP Fevrier 2026</th><th>ETP Fevrier 2026</th>
+      <th>PP Mars 2026</th><th>ETP Mars 2026</th>
+      <th>Variation ETP</th>
+      <th>Norme 2026</th><th>Taux realisation</th>
+      <th>Entrees</th>
+    </tr></thead>
+    <tbody><tr>
+        <td><strong>CHA</strong></td>
+        <td class="num">28</td>
+        <td class="num">22.35</td>
+        <td class="num">28</td>
+        <td class="num">22.35</td>
+        <td class="num"><span style="color:#888">→ =</span></td>
+        <td class="num">0.00</td>
+        <td class="num">-</td>
+        <td class="num"><span style="color:#375623">+1</span></td>
+    </tr><tr>
+        <td><strong>CHE</strong></td>
+        <td class="num">79</td>
+        <td class="num">56.94</td>
+        <td class="num">79</td>
+        <td class="num">56.94</td>
+        <td class="num"><span style="color:#888">→ =</span></td>
+        <td class="num">0.00</td>
+        <td class="num">-</td>
+        <td class="num"><span style="color:#375623">+1</span></td>
+    </tr><tr>
+        <td><strong>CJA</strong></td>
+        <td class="num">21</td>
+        <td class="num">16.41</td>
+        <td class="num">20</td>
+        <td class="num">15.41</td>
+        <td class="num"><span style="color:#C00000">▼ 1.00</span></td>
+        <td class="num">0.00</td>
+        <td class="num">-</td>
+        <td class="num">-</td>
+    </tr><tr>
+        <td><strong>CJENS</strong></td>
+        <td class="num">21</td>
+        <td class="num">17.20</td>
+        <td class="num">21</td>
+        <td class="num">17.20</td>
+        <td class="num"><span style="color:#888">→ =</span></td>
+        <td class="num">0.00</td>
+        <td class="num">-</td>
+        <td class="num">-</td>
+    </tr><tr>
+        <td><strong>CJES</strong></td>
+        <td class="num">108</td>
+        <td class="num">84.29</td>
+        <td class="num">107</td>
+        <td class="num">83.79</td>
+        <td class="num"><span style="color:#C00000">▼ 0.50</span></td>
+        <td class="num">0.00</td>
+        <td class="num">-</td>
+        <td class="num"><span style="color:#375623">+1</span></td>
+    </tr><tr class="total-row">
+    <td>TOTAL</td>
+    <td class="num">257</td><td class="num">197.19</td>
+    <td class="num">255</td><td class="num">195.69</td>
+    <td class="num"><span style="color:#C00000">▼ 1.50</span></td>
+    <td class="num">-</td><td class="num">-</td><td class="num">-</td>
+</tr></tbody>
+  </table>
+</div>
+
+<!-- ALERTES -->
+<div id="tab-alertes" class="tab">
+  <div class="section-title">Alertes — 5 detectees</div>
+  <div style="border:1px solid #D6E4F0;border-radius:4px;overflow:hidden">
+    <div style="display:flex;align-items:center;gap:10px;
+                            padding:7px 10px;border-bottom:1px solid #eee">
+            <div style="min-width:80px"><span style="background:#C00000;color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold">ROUGE</span></div>
+            <div style="min-width:60px;font-weight:bold">CHE</div>
+            <div style="color:#444">YAA — CDD expire dans 13 jours (31/03/2026)</div>
+        </div><div style="display:flex;align-items:center;gap:10px;
+                            padding:7px 10px;border-bottom:1px solid #eee">
+            <div style="min-width:80px"><span style="background:#C00000;color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold">ROUGE</span></div>
+            <div style="min-width:60px;font-weight:bold">CHE</div>
+            <div style="color:#444">YAA — CDD expire dans 13 jours (31/03/2026)</div>
+        </div><div style="display:flex;align-items:center;gap:10px;
+                            padding:7px 10px;border-bottom:1px solid #eee">
+            <div style="min-width:80px"><span style="background:#C00000;color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold">ROUGE</span></div>
+            <div style="min-width:60px;font-weight:bold">CJENS</div>
+            <div style="color:#444">SYE — CDD expire dans 16 jours (03/04/2026)</div>
+        </div><div style="display:flex;align-items:center;gap:10px;
+                            padding:7px 10px;border-bottom:1px solid #eee">
+            <div style="min-width:80px"><span style="background:#C00000;color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold">ROUGE</span></div>
+            <div style="min-width:60px;font-weight:bold">INCONNU</div>
+            <div style="color:#444">BRP — CDD expire dans 27 jours (14/04/2026)</div>
+        </div><div style="display:flex;align-items:center;gap:10px;
+                            padding:7px 10px;border-bottom:1px solid #eee">
+            <div style="min-width:80px"><span style="background:#C00000;color:white;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:bold">ROUGE</span></div>
+            <div style="min-width:60px;font-weight:bold">INCONNU</div>
+            <div style="color:#444">BRP — CDD expire dans 27 jours (14/04/2026)</div>
+        </div>
+  </div>
+</div>
+
+<!-- CDD -->
+<div id="tab-cdd" class="tab">
+  <div class="section-title">CDD arrivant a echeance (90 jours)</div>
+  <table>
+    <thead><tr style="background:#2E75B6;color:white">
+      <th>Agent</th><th>Agrement</th><th>Fonction</th>
+      <th>Jours restants</th><th>Date fin</th>
+    </tr></thead>
+    <tbody><tr>
+            <td style="color:#C00000">YAA</td>
+            <td>CHE</td><td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num" style="color:#C00000;font-weight:bold">13 j</td>
+            <td>31/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">YAA</td>
+            <td>CHE</td><td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num" style="color:#C00000;font-weight:bold">13 j</td>
+            <td>31/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">SYEL</td>
+            <td>CJENS</td><td>LOGOPEDE</td>
+            <td class="num" style="color:#C00000;font-weight:bold">16 j</td>
+            <td>03/04/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">BRP</td>
+            <td>INCONNU</td><td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num" style="color:#C00000;font-weight:bold">27 j</td>
+            <td>14/04/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">BRP</td>
+            <td>INCONNU</td><td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num" style="color:#C00000;font-weight:bold">27 j</td>
+            <td>14/04/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">BUH</td>
+            <td>CHE</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">43 j</td>
+            <td>30/04/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">DES</td>
+            <td>CJA</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">43 j</td>
+            <td>30/04/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">BUH</td>
+            <td>Maribel</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">43 j</td>
+            <td>30/04/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">BUNEL HELENE</td>
+            <td>CHE</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">43 j</td>
+            <td>30/04/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">LGS</td>
+            <td>CJA</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">44 j</td>
+            <td>01/05/2026</td>
+        </tr><tr>
+            <td style="color:#ED7D31">GEJ</td>
+            <td>CJA</td><td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num" style="color:#ED7D31;font-weight:bold">51 j</td>
+            <td>08/05/2026</td>
+        </tr></tbody>
+  </table>
+  <p style="font-size:11px;color:#888;margin-top:6px">
+    Rouge = moins de 30j | Orange = 30-60j | Jaune = 60-90j</p>
+</div>
+
+<!-- COUTS -->
+<div id="tab-couts" class="tab">
+  <div class="section-title">Couts salariaux mensuels — Mars 2026 vs Fevrier 2026</div>
+  <p style='color:#888'>Donnees paie non disponibles pour ce mois.</p>
+</div>
+
+<!-- DETAIL PAR AGREMENT -->
+<div id="tab-detail" class="tab">
+  <div class="section-title">Detail par agrement — Mars 2026</div>
+  
+    <div class="agr-card" id="agr-CHA">
+        <div class="agr-title">CHA</div>
+        <div style="padding:14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div>
+                    <h4 style="color:#2E75B6;margin-bottom:6px">ETP par categorie</h4>
+                    <table><thead><tr style="background:#2E75B6;color:white">
+                        <th>Categorie</th><th>PP</th><th>ETP</th>
+                    </tr></thead><tbody><tr>
+            <td>Equipe</td>
+            <td class="num">20</td>
+            <td class="num">14.85</td>
+        </tr><tr>
+            <td>Personnel administratif et comptable</td>
+            <td class="num">1</td>
+            <td class="num">1.00</td>
+        </tr><tr>
+            <td>Personnel de direction</td>
+            <td class="num">1</td>
+            <td class="num">1.00</td>
+        </tr><tr>
+            <td>Personnel technique</td>
+            <td class="num">6</td>
+            <td class="num">5.50</td>
+        </tr></tbody></table>
+                    
+                </div>
+                <div>
+        <h4 style="color:#2E75B6;margin:12px 0 6px">Mouvements ce mois</h4>
+        <table><thead><tr style="background:#2E75B6;color:white">
+            <th>Nom</th><th>Fonction</th><th>ETP</th><th>Date</th>
+        </tr></thead><tbody><tr>
+            <td style="color:#375623">+ VMDVE</td>
+            <td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num">0.25</td>
+            <td>16/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">- VMDVE</td>
+            <td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num">0.75</td>
+            <td>15/03/2026</td>
+        </tr></tbody></table></div>
+            </div>
+        </div>
+    </div>
+    <div class="agr-card" id="agr-CHE">
+        <div class="agr-title">CHE</div>
+        <div style="padding:14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div>
+                    <h4 style="color:#2E75B6;margin-bottom:6px">ETP par categorie</h4>
+                    <table><thead><tr style="background:#2E75B6;color:white">
+                        <th>Categorie</th><th>PP</th><th>ETP</th>
+                    </tr></thead><tbody><tr>
+            <td>Equipe</td>
+            <td class="num">61</td>
+            <td class="num">40.36</td>
+        </tr><tr>
+            <td>Personnel administratif et comptable</td>
+            <td class="num">2</td>
+            <td class="num">1.08</td>
+        </tr><tr>
+            <td>Personnel de direction</td>
+            <td class="num">2</td>
+            <td class="num">2.00</td>
+        </tr><tr>
+            <td>Personnel technique</td>
+            <td class="num">14</td>
+            <td class="num">13.50</td>
+        </tr></tbody></table>
+                    
+            <h4 style="color:#2E75B6;margin:12px 0 6px">Repartition Surdite / Cecite</h4>
+            <table><thead><tr style="background:#2E75B6;color:white">
+                <th>Domaine</th><th>PP</th><th>ETP</th>
+            </tr></thead><tbody><tr><td>Cecite</td><td class='num'>16</td><td class='num'>9.46</td></tr><tr><td>Surdite</td><td class='num'>45</td><td class='num'>30.65</td></tr></tbody></table>
+                </div>
+                <div>
+        <h4 style="color:#2E75B6;margin:12px 0 6px">Mouvements ce mois</h4>
+        <table><thead><tr style="background:#2E75B6;color:white">
+            <th>Nom</th><th>Fonction</th><th>ETP</th><th>Date</th>
+        </tr></thead><tbody><tr>
+            <td style="color:#375623">+ THI</td>
+            <td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num">0.50</td>
+            <td>02/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">- AZZS</td>
+            <td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num">0.50</td>
+            <td>01/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">- THI</td>
+            <td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num">0.50</td>
+            <td>15/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">- YAA</td>
+            <td>EDUCATEUR BREVETE (EDUC CL 2)</td>
+            <td class="num">0.70</td>
+            <td>31/03/2026</td>
+        </tr></tbody></table></div>
+            </div>
+        </div>
+    </div>
+    <div class="agr-card" id="agr-CJA">
+        <div class="agr-title">CJA</div>
+        <div style="padding:14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div>
+                    <h4 style="color:#2E75B6;margin-bottom:6px">ETP par categorie</h4>
+                    <table><thead><tr style="background:#2E75B6;color:white">
+                        <th>Categorie</th><th>PP</th><th>ETP</th>
+                    </tr></thead><tbody><tr>
+            <td>Equipe</td>
+            <td class="num">16</td>
+            <td class="num">11.91</td>
+        </tr><tr>
+            <td>Personnel technique</td>
+            <td class="num">4</td>
+            <td class="num">3.50</td>
+        </tr></tbody></table>
+                    
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="agr-card" id="agr-CJENS">
+        <div class="agr-title">CJENS</div>
+        <div style="padding:14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div>
+                    <h4 style="color:#2E75B6;margin-bottom:6px">ETP par categorie</h4>
+                    <table><thead><tr style="background:#2E75B6;color:white">
+                        <th>Categorie</th><th>PP</th><th>ETP</th>
+                    </tr></thead><tbody><tr>
+            <td>Equipe</td>
+            <td class="num">19</td>
+            <td class="num">15.20</td>
+        </tr><tr>
+            <td>Personnel administratif et comptable</td>
+            <td class="num">1</td>
+            <td class="num">1.00</td>
+        </tr><tr>
+            <td>Personnel technique</td>
+            <td class="num">1</td>
+            <td class="num">1.00</td>
+        </tr></tbody></table>
+                    
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="agr-card" id="agr-CJES">
+        <div class="agr-title">CJES</div>
+        <div style="padding:14px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div>
+                    <h4 style="color:#2E75B6;margin-bottom:6px">ETP par categorie</h4>
+                    <table><thead><tr style="background:#2E75B6;color:white">
+                        <th>Categorie</th><th>PP</th><th>ETP</th>
+                    </tr></thead><tbody><tr>
+            <td>Equipe</td>
+            <td class="num">87</td>
+            <td class="num">65.73</td>
+        </tr><tr>
+            <td>Personnel administratif et comptable</td>
+            <td class="num">5</td>
+            <td class="num">4.06</td>
+        </tr><tr>
+            <td>Personnel de direction</td>
+            <td class="num">1</td>
+            <td class="num">1.00</td>
+        </tr><tr>
+            <td>Personnel technique</td>
+            <td class="num">14</td>
+            <td class="num">13.00</td>
+        </tr></tbody></table>
+                    
+                </div>
+                <div>
+        <h4 style="color:#2E75B6;margin:12px 0 6px">Mouvements ce mois</h4>
+        <table><thead><tr style="background:#2E75B6;color:white">
+            <th>Nom</th><th>Fonction</th><th>ETP</th><th>Date</th>
+        </tr></thead><tbody><tr>
+            <td style="color:#375623">+ N C</td>
+            <td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num">0.75</td>
+            <td>16/03/2026</td>
+        </tr><tr>
+            <td style="color:#C00000">- N...CK C</td>
+            <td>EDUCATEUR BACHELIER (EDUC CL 1)</td>
+            <td class="num">0.75</td>
+            <td>15/03/2026</td>
+        </tr></tbody></table></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
