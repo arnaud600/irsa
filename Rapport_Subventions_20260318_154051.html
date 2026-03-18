@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Rapport Subventions 20260318_154051</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Calibri, Arial, sans-serif; font-size: 13px; color: #222; background: #f4f6f9; }
+  .page { max-width: 1200px; margin: 30px auto; background: white; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+  .header { background: #1F4E79; color: white; padding: 28px 32px; border-radius: 6px; margin-bottom: 30px; }
+  .header h1 { font-size: 24px; margin-bottom: 6px; }
+  .header p  { font-size: 13px; opacity: 0.8; }
+  .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 36px; }
+  .stat-card { background: #EBF3FB; border-left: 4px solid #2E75B6; padding: 16px; border-radius: 4px; }
+  .stat-card .val { font-size: 32px; font-weight: bold; color: #1F4E79; }
+  .stat-card .lbl { font-size: 11px; color: #595959; margin-top: 4px; }
+  .stat-card.rouge { border-left-color: #C00000; }
+  .stat-card.rouge .val { color: #C00000; }
+  .stat-card.orange { border-left-color: #ED7D31; }
+  .stat-card.orange .val { color: #ED7D31; }
+  .section-title { background: #1F4E79; color: white; padding: 10px 16px;
+                    font-size: 15px; font-weight: bold; border-radius: 4px;
+                    margin: 32px 0 16px; }
+  h2 { color: #2E75B6; font-size: 14px; margin: 24px 0 8px;
+        border-bottom: 2px solid #D6E4F0; padding-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 8px; font-size: 12px; }
+  thead tr { background: #2E75B6; color: white; }
+  th { padding: 7px 10px; text-align: left; font-weight: bold; }
+  td { padding: 5px 10px; border-bottom: 1px solid #E8E8E8; }
+  tr:nth-child(even) td { background: #F7FAFD; }
+  tr.total-row td { background: #D6E4F0 !important; font-weight: bold; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .badge-critique { background:#C00000; color:white; padding:2px 8px;
+                     border-radius:10px; font-size:11px; font-weight:bold; }
+  .badge-warn     { background:#ED7D31; color:white; padding:2px 8px;
+                     border-radius:10px; font-size:11px; }
+  .ok { color:#375623; font-weight:bold; padding:12px;
+         background:#EBF8F0; border-radius:4px; }
+  .legende { font-size:11px; color:#808080; font-style:italic; margin-top:8px; }
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; padding: 10px; }
+    .section-title, thead tr, .stat-card, tr.total-row td {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>Rapport de suivi des subventions</h1>
+    <p>Genere le 18/03/2026 a 15:40</p>
+  </div>
+  <div class="stats">
+    <div class="stat-card"><div class="val">5</div><div class="lbl">Agreemnts analyses</div></div>
+    <div class="stat-card"><div class="val">5</div><div class="lbl">Exercices couverts</div></div>
+    <div class="stat-card rouge"><div class="val">33</div><div class="lbl">Problemes critiques</div></div>
+    <div class="stat-card orange"><div class="val">0</div><div class="lbl">A verifier</div></div>
+  </div>
+  <div class="section-title">1. Comparaison ETP reels / Normes par agrement</div>
+  
+    <h2>CHA</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercice</th><th>Categorie</th>
+                <th>ETP Reel</th><th>PP</th>
+                <th>Norme ETP</th><th>Ecart ETP</th>
+                <th>Taux realisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td rowspan="5">2022</td>
+                <td>Equipe</td>
+                <td class="num">17.1940</td>
+                <td class="num">36</td>
+                <td class="num">17.9500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.7560</td>
+                <td class="num" style="color:#375623">95.8%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">5.1763</td>
+                <td class="num">8</td>
+                <td class="num">5.4900</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.3137</td>
+                <td class="num" style="color:#ED7D31">94.3%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">1.0000</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">0.9781</td>
+                <td class="num">4</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.9781</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">24.3484</td>
+                <td class="num">49</td>
+                <td class="num">23.4400</td>
+                <td class="num" style="">0.9084</td>
+                <td class="num" style="">103.9%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2023</td>
+                <td>Equipe</td>
+                <td class="num">17.7501</td>
+                <td class="num">31</td>
+                <td class="num">18.0800</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.3299</td>
+                <td class="num" style="color:#375623">98.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">4.1259</td>
+                <td class="num">7</td>
+                <td class="num">5.4900</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.3641</td>
+                <td class="num" style="color:#C00000">75.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">1.0000</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">1.0000</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">23.8760</td>
+                <td class="num">41</td>
+                <td class="num">23.5700</td>
+                <td class="num" style="">0.3060</td>
+                <td class="num" style="">101.3%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2024</td>
+                <td>Equipe</td>
+                <td class="num">37.8757</td>
+                <td class="num">90</td>
+                <td class="num">21.1500</td>
+                <td class="num" style="color:#375623;font-weight:bold">16.7257</td>
+                <td class="num" style="color:#375623">179.1%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.5530</td>
+                <td class="num">16</td>
+                <td class="num">5.8600</td>
+                <td class="num" style="color:#375623;font-weight:bold">6.6930</td>
+                <td class="num" style="color:#375623">214.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.0118</td>
+                <td class="num">10</td>
+                <td class="num">1.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0118</td>
+                <td class="num" style="color:#375623">301.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">1.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="color:#375623">200.0%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">55.4405</td>
+                <td class="num">118</td>
+                <td class="num">29.0100</td>
+                <td class="num" style="">26.4305</td>
+                <td class="num" style="">191.1%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2025</td>
+                <td>Equipe</td>
+                <td class="num">18.7359</td>
+                <td class="num">49</td>
+                <td class="num">21.1300</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.3941</td>
+                <td class="num" style="color:#ED7D31">88.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">4.1579</td>
+                <td class="num">7</td>
+                <td class="num">5.8600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.7021</td>
+                <td class="num" style="color:#C00000">71.0%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">1.0000</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">1.0000</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">24.8938</td>
+                <td class="num">58</td>
+                <td class="num">26.9900</td>
+                <td class="num" style="">-2.0962</td>
+                <td class="num" style="">92.2%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2026</td>
+                <td>Equipe</td>
+                <td class="num">16.5978</td>
+                <td class="num">32</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">16.5978</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">20.0945</td>
+                <td class="num">23</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">20.0945</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.5000</td>
+                <td class="num">7</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">3.5000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">1.0000</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">41.1923</td>
+                <td class="num">63</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="">41.1923</td>
+                <td class="num" style="">-</td>
+            </tr></tbody>
+    </table>
+    <h2>CHE</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercice</th><th>Categorie</th>
+                <th>ETP Reel</th><th>PP</th>
+                <th>Norme ETP</th><th>Ecart ETP</th>
+                <th>Taux realisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td rowspan="5">2022</td>
+                <td>Equipe</td>
+                <td class="num">39.4318</td>
+                <td class="num">75</td>
+                <td class="num">40.9900</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.5582</td>
+                <td class="num" style="color:#375623">96.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.8176</td>
+                <td class="num">15</td>
+                <td class="num">13.7400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.9224</td>
+                <td class="num" style="color:#ED7D31">93.3%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.2752</td>
+                <td class="num">4</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">3.2752</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">57.5246</td>
+                <td class="num">96</td>
+                <td class="num">54.7300</td>
+                <td class="num" style="">2.7946</td>
+                <td class="num" style="">105.1%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2023</td>
+                <td>Equipe</td>
+                <td class="num">38.6494</td>
+                <td class="num">76</td>
+                <td class="num">39.9900</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.3406</td>
+                <td class="num" style="color:#375623">96.6%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">13.1939</td>
+                <td class="num">15</td>
+                <td class="num">13.6100</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.4161</td>
+                <td class="num" style="color:#375623">96.9%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.0130</td>
+                <td class="num">8</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">3.0130</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">56.8563</td>
+                <td class="num">101</td>
+                <td class="num">53.6000</td>
+                <td class="num" style="">3.2563</td>
+                <td class="num" style="">106.1%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2024</td>
+                <td>Equipe</td>
+                <td class="num">37.8059</td>
+                <td class="num">89</td>
+                <td class="num">39.9400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.1341</td>
+                <td class="num" style="color:#ED7D31">94.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.5968</td>
+                <td class="num">16</td>
+                <td class="num">13.5000</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.9032</td>
+                <td class="num" style="color:#ED7D31">93.3%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.0158</td>
+                <td class="num">10</td>
+                <td class="num">3.4000</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.3842</td>
+                <td class="num" style="color:#ED7D31">88.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">2.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.0000</td>
+                <td class="num" style="color:#375623">100.0%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">55.4185</td>
+                <td class="num">117</td>
+                <td class="num">58.8400</td>
+                <td class="num" style="">-3.4215</td>
+                <td class="num" style="">94.2%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2025</td>
+                <td>Equipe</td>
+                <td class="num">36.9484</td>
+                <td class="num">89</td>
+                <td class="num">38.6500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.7016</td>
+                <td class="num" style="color:#375623">95.6%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.6001</td>
+                <td class="num">16</td>
+                <td class="num">13.3600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.7599</td>
+                <td class="num" style="color:#ED7D31">94.3%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">2.6957</td>
+                <td class="num">11</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.6957</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">1.9096</td>
+                <td class="num">3</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.9096</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">54.1538</td>
+                <td class="num">119</td>
+                <td class="num">52.0100</td>
+                <td class="num" style="">2.1438</td>
+                <td class="num" style="">104.1%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="3">2026</td>
+                <td>Equipe</td>
+                <td class="num">34.6624</td>
+                <td class="num">68</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">34.6624</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">36.6624</td>
+                <td class="num">70</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="">36.6624</td>
+                <td class="num" style="">-</td>
+            </tr></tbody>
+    </table>
+    <h2>CJA</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercice</th><th>Categorie</th>
+                <th>ETP Reel</th><th>PP</th>
+                <th>Norme ETP</th><th>Ecart ETP</th>
+                <th>Taux realisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td rowspan="4">2022</td>
+                <td>Equipe</td>
+                <td class="num">13.0346</td>
+                <td class="num">39</td>
+                <td class="num">15.5300</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.4954</td>
+                <td class="num" style="color:#ED7D31">83.9%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.5486</td>
+                <td class="num">4</td>
+                <td class="num">3.1700</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.6214</td>
+                <td class="num" style="color:#ED7D31">80.4%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">0.3671</td>
+                <td class="num">1</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.3671</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">15.9503</td>
+                <td class="num">44</td>
+                <td class="num">18.7000</td>
+                <td class="num" style="">-2.7497</td>
+                <td class="num" style="">85.3%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="4">2023</td>
+                <td>Equipe</td>
+                <td class="num">13.5052</td>
+                <td class="num">31</td>
+                <td class="num">15.6000</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.0948</td>
+                <td class="num" style="color:#ED7D31">86.6%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.6656</td>
+                <td class="num">7</td>
+                <td class="num">3.1500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.4844</td>
+                <td class="num" style="color:#ED7D31">84.6%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">0.2082</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.2082</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">16.3790</td>
+                <td class="num">40</td>
+                <td class="num">18.7500</td>
+                <td class="num" style="">-2.3710</td>
+                <td class="num" style="">87.4%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="3">2024</td>
+                <td>Equipe</td>
+                <td class="num">15.7424</td>
+                <td class="num">33</td>
+                <td class="num">17.7400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.9976</td>
+                <td class="num" style="color:#ED7D31">88.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.1126</td>
+                <td class="num">3</td>
+                <td class="num">3.9500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.8374</td>
+                <td class="num" style="color:#C00000">53.5%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">17.8550</td>
+                <td class="num">36</td>
+                <td class="num">21.6900</td>
+                <td class="num" style="">-3.8350</td>
+                <td class="num" style="">82.3%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="4">2025</td>
+                <td>Equipe</td>
+                <td class="num">15.2634</td>
+                <td class="num">47</td>
+                <td class="num">17.7400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.4766</td>
+                <td class="num" style="color:#ED7D31">86.0%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">3.0781</td>
+                <td class="num">6</td>
+                <td class="num">3.9500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.8719</td>
+                <td class="num" style="color:#C00000">77.9%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">0.2890</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.2890</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">18.6305</td>
+                <td class="num">55</td>
+                <td class="num">21.6900</td>
+                <td class="num" style="">-3.0595</td>
+                <td class="num" style="">85.9%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="2">2026</td>
+                <td>Equipe</td>
+                <td class="num">14.1631</td>
+                <td class="num">40</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">14.1631</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">14.1631</td>
+                <td class="num">40</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="">14.1631</td>
+                <td class="num" style="">-</td>
+            </tr></tbody>
+    </table>
+    <h2>CJENS</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercice</th><th>Categorie</th>
+                <th>ETP Reel</th><th>PP</th>
+                <th>Norme ETP</th><th>Ecart ETP</th>
+                <th>Taux realisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td rowspan="3">2022</td>
+                <td>Equipe</td>
+                <td class="num">16.2068</td>
+                <td class="num">39</td>
+                <td class="num">17.6700</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.4632</td>
+                <td class="num" style="color:#ED7D31">91.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.3047</td>
+                <td class="num">5</td>
+                <td class="num">2.4100</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.1053</td>
+                <td class="num" style="color:#375623">95.6%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">18.5115</td>
+                <td class="num">44</td>
+                <td class="num">20.0800</td>
+                <td class="num" style="">-1.5685</td>
+                <td class="num" style="">92.2%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="3">2023</td>
+                <td>Equipe</td>
+                <td class="num">16.0991</td>
+                <td class="num">34</td>
+                <td class="num">17.6700</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.5709</td>
+                <td class="num" style="color:#ED7D31">91.1%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.2199</td>
+                <td class="num">4</td>
+                <td class="num">2.4100</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.1901</td>
+                <td class="num" style="color:#ED7D31">92.1%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">18.3190</td>
+                <td class="num">38</td>
+                <td class="num">20.0800</td>
+                <td class="num" style="">-1.7610</td>
+                <td class="num" style="">91.2%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="3">2024</td>
+                <td>Equipe</td>
+                <td class="num">15.7397</td>
+                <td class="num">33</td>
+                <td class="num">17.0200</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-1.2803</td>
+                <td class="num" style="color:#ED7D31">92.5%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.1126</td>
+                <td class="num">3</td>
+                <td class="num">2.5200</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.4074</td>
+                <td class="num" style="color:#ED7D31">83.8%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">17.8523</td>
+                <td class="num">36</td>
+                <td class="num">19.5400</td>
+                <td class="num" style="">-1.6877</td>
+                <td class="num" style="">91.4%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="3">2025</td>
+                <td>Equipe</td>
+                <td class="num">16.4808</td>
+                <td class="num">32</td>
+                <td class="num">17.3400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.8592</td>
+                <td class="num" style="color:#375623">95.0%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">2.0959</td>
+                <td class="num">3</td>
+                <td class="num">2.5400</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.4441</td>
+                <td class="num" style="color:#ED7D31">82.5%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">18.5767</td>
+                <td class="num">35</td>
+                <td class="num">19.8800</td>
+                <td class="num" style="">-1.3033</td>
+                <td class="num" style="">93.4%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="2">2026</td>
+                <td>Equipe</td>
+                <td class="num">16.6721</td>
+                <td class="num">27</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">16.6721</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">16.6721</td>
+                <td class="num">27</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="">16.6721</td>
+                <td class="num" style="">-</td>
+            </tr></tbody>
+    </table>
+    <h2>CJES</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Exercice</th><th>Categorie</th>
+                <th>ETP Reel</th><th>PP</th>
+                <th>Norme ETP</th><th>Ecart ETP</th>
+                <th>Taux realisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="">
+                <td rowspan="5">2022</td>
+                <td>Equipe</td>
+                <td class="num">69.2798</td>
+                <td class="num">134</td>
+                <td class="num">74.4600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-5.1802</td>
+                <td class="num" style="color:#ED7D31">93.0%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.1630</td>
+                <td class="num">15</td>
+                <td class="num">15.9600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-3.7970</td>
+                <td class="num" style="color:#C00000">76.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">4.9313</td>
+                <td class="num">8</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">4.9313</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.3671</td>
+                <td class="num">4</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.3671</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">88.7412</td>
+                <td class="num">161</td>
+                <td class="num">90.4200</td>
+                <td class="num" style="">-1.6788</td>
+                <td class="num" style="">98.1%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2023</td>
+                <td>Equipe</td>
+                <td class="num">70.7835</td>
+                <td class="num">133</td>
+                <td class="num">74.4600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-3.6765</td>
+                <td class="num" style="color:#375623">95.1%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">13.5302</td>
+                <td class="num">19</td>
+                <td class="num">15.9600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.4298</td>
+                <td class="num" style="color:#ED7D31">84.8%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">3.9425</td>
+                <td class="num">9</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">3.9425</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0767</td>
+                <td class="num">5</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0767</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">90.3329</td>
+                <td class="num">166</td>
+                <td class="num">90.4200</td>
+                <td class="num" style="">-0.0871</td>
+                <td class="num" style="">99.9%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2024</td>
+                <td>Equipe</td>
+                <td class="num">70.8979</td>
+                <td class="num">145</td>
+                <td class="num">74.4600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-3.5621</td>
+                <td class="num" style="color:#375623">95.2%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.7086</td>
+                <td class="num">18</td>
+                <td class="num">15.9600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-3.2514</td>
+                <td class="num" style="color:#C00000">79.6%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">5.0829</td>
+                <td class="num">12</td>
+                <td class="num">5.1500</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-0.0671</td>
+                <td class="num" style="color:#375623">98.7%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.5000</td>
+                <td class="num">3</td>
+                <td class="num">2.5000</td>
+                <td class="num" style="color:#375623;font-weight:bold">0.0000</td>
+                <td class="num" style="color:#375623">100.0%</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">91.1894</td>
+                <td class="num">178</td>
+                <td class="num">98.0700</td>
+                <td class="num" style="">-6.8806</td>
+                <td class="num" style="">93.0%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2025</td>
+                <td>Equipe</td>
+                <td class="num">72.3214</td>
+                <td class="num">132</td>
+                <td class="num">74.4600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.1386</td>
+                <td class="num" style="color:#375623">97.1%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">13.4599</td>
+                <td class="num">17</td>
+                <td class="num">15.9600</td>
+                <td class="num" style="color:#C00000;font-weight:bold">-2.5001</td>
+                <td class="num" style="color:#ED7D31">84.3%</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">4.9888</td>
+                <td class="num">12</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">4.9888</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">1.8283</td>
+                <td class="num">6</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">1.8283</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">92.5984</td>
+                <td class="num">167</td>
+                <td class="num">90.4200</td>
+                <td class="num" style="">2.1784</td>
+                <td class="num" style="">102.4%</td>
+            </tr>
+            <tr class="">
+                <td rowspan="5">2026</td>
+                <td>Equipe</td>
+                <td class="num">69.4565</td>
+                <td class="num">108</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">69.4565</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Technique</td>
+                <td class="num">12.4778</td>
+                <td class="num">13</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">12.4778</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Admin_Compta</td>
+                <td class="num">4.7500</td>
+                <td class="num">10</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">4.7500</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="">
+                
+                <td>Direction</td>
+                <td class="num">2.0000</td>
+                <td class="num">2</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="color:#375623;font-weight:bold">2.0000</td>
+                <td class="num" style="">-</td>
+            </tr>
+            <tr class="total-row">
+                
+                <td>TOTAL</td>
+                <td class="num">88.6843</td>
+                <td class="num">133</td>
+                <td class="num">0.0000</td>
+                <td class="num" style="">88.6843</td>
+                <td class="num" style="">-</td>
+            </tr></tbody>
+    </table>
+  <p class="legende">Ecart ETP = ETP Reel - Norme ETP &nbsp;|&nbsp;
+     Rouge = sous la norme &nbsp;|&nbsp; Vert = au-dessus &nbsp;|&nbsp;
+     Taux &lt; 80% en rouge, 80-95% en orange, 95%+ en vert</p>
+  <div class="section-title">2. Actions a mener — donnees manquantes ou a zero</div>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>Priorite</th><th>Agrement</th><th>Exercice</th>
+                <th>Categorie</th><th>Probleme</th>
+                <th>Valeur</th><th>Action suggeree</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2022</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2022</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2023</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2023</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2025</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2025</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2026</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2026</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2026</td>
+            <td>Equipe</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHA</td>
+            <td>2026</td>
+            <td>Technique</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2022</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2022</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2023</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2023</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2025</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2025</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2026</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CHE</td>
+            <td>2026</td>
+            <td>Equipe</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJA</td>
+            <td>2022</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJA</td>
+            <td>2023</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJA</td>
+            <td>2025</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJA</td>
+            <td>2026</td>
+            <td>Equipe</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJENS</td>
+            <td>2026</td>
+            <td>Equipe</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2022</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2022</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2023</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2023</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2025</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2025</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2026</td>
+            <td>Admin_Compta</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2026</td>
+            <td>Direction</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2026</td>
+            <td>Equipe</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr>
+        <tr>
+            <td><span class="badge-critique">CRITIQUE</span></td>
+            <td>CJES</td>
+            <td>2026</td>
+            <td>Technique</td>
+            <td>Norme ETP manquante ou = 0</td>
+            <td class="num">0.0</td>
+            <td>Completer le fichier des normes pour cet agrement/exercice</td>
+        </tr></tbody>
+    </table>
+</div>
+</body>
+</html>
